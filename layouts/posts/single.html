@@ -20,8 +20,21 @@
     {{- block "custom-aside" . }}{{ end -}}
   </aside>
 
-  <article class="page single">
+  <article class="page single page-wide">
     <div class="header">
+
+      {{- /* Featured image */ -}}
+      {{- $image := $params.featuredimage -}}
+      {{- with .Resources.GetMatch "featured-image" -}}
+      {{- $image = .RelPermalink -}}
+      {{- end -}}
+      {{- with $image -}}
+      <div class="featured-image">
+        {{- dict "Src" . "Title" $.Description | partial "plugin/image.html" -}}
+      </div>
+      {{- end -}}
+
+      <div class="single-card" {{ with $image }}data-image="true" {{ end }}>
       {{- /* Title */ -}}
       <h1 class="single-title animate__animated animate__flipInX">
         {{- $repost := $params.repost | default dict -}}
@@ -41,7 +54,7 @@
 
       {{- /* Subtitle */ -}}
       {{- with $params.subtitle -}}<p class="single-subtitle animate__animated animate__fadeIn">{{ . }}</p>{{- end -}}
-    </div>
+    
 
     {{- /* Meta */ -}}
     <div class="post-meta">
@@ -134,17 +147,6 @@
       </div>
     </div>
 
-    {{- /* Featured image */ -}}
-    {{- $image := $params.featuredimage -}}
-    {{- with .Resources.GetMatch "featured-image" -}}
-      {{- $image = .RelPermalink -}}
-    {{- end -}}
-    {{- with $image -}}
-      <div class="featured-image">
-        {{- dict "Src" . "Title" $.Description | partial "plugin/image.html" -}}
-      </div>
-    {{- end -}}
-
     {{- /* Static TOC */ -}}
     {{- if (ne $toc.enable false) | and (ne $tocEmpty true) -}}
       <div class="details toc{{ with $params.password }} encrypted-hidden{{ end }}" id="toc-static" data-kept="{{ if $toc.keepStatic }}true{{ else }}false{{ end }}">
@@ -210,7 +212,7 @@
 
     {{- /* Custom block after post footer */ -}}
     {{- block "custom-post__footer:after" . }}{{ end -}}
-
+    </div>
     {{- /* Comment */ -}}
     {{- partial "single/comment.html" . -}}
   </article>

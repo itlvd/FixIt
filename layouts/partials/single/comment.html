@@ -5,7 +5,7 @@
 
 {{- if $comment.enable -}}
   {{- $commentConfig = dict "enable" true "expired" (.Scratch.Get "commentExpired" | default false) -}}
-  <div id="comments">
+  <div id="comments" class="single-card">
     {{- /* Artalk Comment System */ -}}
     {{/*
       TODO next version to support new config for Artalk

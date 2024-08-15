@@ -519,8 +519,9 @@ class FixIt {
       const $toc = document.getElementById('toc-auto');
       $toc.style.visibility = 'visible';
       this.util.animateCSS($toc, ['animate__fadeIn', 'animate__faster'], true);
-      const $postMeta = document.querySelector('.post-meta');
-      $toc.style.marginTop = `${$postMeta.offsetTop + $postMeta.clientHeight}px`;
+      const $postMeta = document.querySelector('.featured-image');
+      //$toc.style.marginTop = `${$postMeta.offsetTop + $postMeta.clientHeight}px`;
+      $toc.style.marginTop = `${$postMeta.offsetTop + 15}px`;
       const $tocLinkElements = $tocCore.querySelectorAll('a:first-child');
       const $tocLiElements = $tocCore.getElementsByTagName('li');
       const $headingElements = document.getElementsByClassName('heading-element');

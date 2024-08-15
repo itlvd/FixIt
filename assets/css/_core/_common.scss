@@ -2,7 +2,12 @@
 // Common Styles
 // 常用样式
 // ==============================
-
+img:not(.logo) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  display: block;
+}
 .text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;

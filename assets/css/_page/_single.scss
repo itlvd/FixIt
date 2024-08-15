@@ -2,6 +2,33 @@
 @import '../_partials/_single/fixit-decryptor';
 @import '../_partials/_single/collections';
 
+.single-card {
+  padding: 1rem;
+  margin: 1rem 0 0;
+  @include border-radius(.5rem);
+  @include box-shadow(0 2px 4px -1px rgba(0, 0, 0, 0.2));
+  background-color: $global-background-card-color;
+
+  [theme=dark] & {
+    background-color: $global-background-card-color-dark;
+  }
+
+  &[data-image=true] {
+    margin-top: 0;
+    @include border-radius(0 0 .5rem .5rem);
+  }
+}
+
+.single-post {
+  padding: 10px 70px;
+  [data-theme='dark'] & {
+    background-color: $global-background-color-dark;
+  }
+  background-color: $single-post-color;
+  border-radius: 10px;
+  margin-top: 10px;
+  line-height: 32px;
+}
 .single {
   .single-title {
     padding: 1rem 0 0.5rem;
@@ -73,7 +100,9 @@
   }
 
   .featured-image {
-    margin: 1rem 0;
+    //margin: 1rem 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
 
     img {
       display: block;
