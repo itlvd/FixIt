@@ -19,16 +19,6 @@
   }
 }
 
-.single-post {
-  padding: 10px 70px;
-  [data-theme='dark'] & {
-    background-color: $global-background-color-dark;
-  }
-  background-color: $single-post-color;
-  border-radius: 10px;
-  margin-top: 10px;
-  line-height: 32px;
-}
 .single {
   .single-title {
     padding: 1rem 0 0.5rem;
