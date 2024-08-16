@@ -109,7 +109,7 @@
         @include transform(scale(1.01));
       }
     
-      [theme=dark] & {
+      [data-theme=dark] & {
         background-color: $global-background-card-color-dark;
         color: $global-font-color-dark;
       }
