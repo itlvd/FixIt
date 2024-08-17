@@ -14,7 +14,7 @@
       {{- /* Subtitle */ -}}
       {{- with $params.subtitle -}}<p class="single-subtitle animate__animated animate__fadeIn">{{ . }}</p>{{- end -}}
     </div>
-
+    <div class="single-card">
     {{- /* Content */ -}}
     {{- $content := dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
     {{- if $params.password -}}
@@ -39,8 +39,11 @@
         {{- partial "single/fixit-decryptor.html" . -}}
       {{- end -}}
     </div>
-
+    </div>
     {{- /* Comment */ -}}
-    {{- partial "single/comment.html" . -}}
+    {{- if (eq .Params.IsComment true) -}}
+      {{- partial "single/comment.html" . -}}
+    {{- end -}}
+   
   </article>
 {{- end -}}
