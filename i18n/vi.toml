@@ -15,12 +15,12 @@ quicklyUpgrade = ""
 [baseof]
 backToTop = "Lên trên"
 viewComments = "Xem bình luận"
-noscript = ""
+noscript = "Trang web hoạt động tốt nhất khi bật JavaScript."
 # === baseof ===
 
 # === Taxonomy ===
 [archives]
-other = ""
+other = "Lưu trữ"
 
 [allSome]
 other = "Tất cả {{ .Some }}"
@@ -32,10 +32,10 @@ other = "Danh mục"
 other = "Danh mục"
 
 [collection]
-other = ""
+other = "Siries"
 
 [collections]
-other = ""
+other = "Series"
 
 [tag]
 other = "Nhãn"
@@ -52,12 +52,12 @@ other = "Bài viết"
 recentlyUpdated = "Mới nhất"
 
 [section.totalWordCount]
-one = ""
-other = ""
+one = "Tất cả có một từ"
+other = "Tất cả có {{ .Count }} từ"
 
 [section.archiveCounter]
-one = ""
-other = ""
+one = "Chỉ có một bài viết"
+other = "{{ .Count }} bài viết"
 # === Section ===
 
 # === Pagination ===
@@ -68,7 +68,7 @@ more = "Thêm"
 # === partials/header.html ===
 [header]
 selectLanguage = "Chọn Ngôn ngữ"
-noMoretTranslations = "Không có nữa"
+noMoretTranslations = "Không có bản dịch khác"
 switchTheme = "Đổi chủ đề"
 # === partials/header.html ===
 
@@ -110,26 +110,26 @@ other = "Chia sẻ trên"
 # === posts/single.html ===
 [single]
 contents = "Nội dung"
-pin = ""
-repost = ""
+pin = "Pin To Top"
+repost = "Đăng lại"
 publishedOnDate = "đăng ngày {{ .Date }}"
 views = "lượt xem"
 comments = "bình luận"
 author = "Tác giả"
 updatedOnDate = "Cập nhật ngày {{ .Date }}"
 readMarkdown = "Đọc với định dạng Markdown"
-viewSource = ""
+viewSource = "Xem mả nguồn"
 editThisPage = "Chỉnh sửa trang này"
-reportIssue = ""
+reportIssue = "Báo cáo lỗi"
 back = "Quay lại"
 home = "Trang chủ"
 readMore = "Đọc thêm"
 expirationReminder = "Bài viết này được cập nhật lần cuối vào {{ .Date }}, nội dung có thể đã lỗi thời."
-encryptedAbstract = ""
-encryptedMessage = ""
+encryptedAbstract = "Bài viết này được bảo mật, do đó bạn cần mật khẩu để xem nội dung."
+encryptedMessage = "Vui lòng nhập mật khẩu để xem nội dung."
 password = "Mật khẩu"
-enterBtn = ""
-encryptyAgain = ""
+enterBtn = "Vào"
+encryptyAgain = "Mã hóa lần nữa"
 relatedContent = "Nội dung liên quan"
 
 [single.includedIn]
@@ -149,7 +149,7 @@ one = "One minute"
 other = "{{ .Count }} phút"
 
 [single.reward]
-donate = ""
+donate = "Donate"
 wechatpay = ""
 alipay = ""
 paypal = ""
