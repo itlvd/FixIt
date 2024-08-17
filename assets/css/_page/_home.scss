@@ -225,6 +225,11 @@
           li {
             display: inline-block;
           }
+
+          .post-tag:not(:last-child)::after {
+            content: '';
+            margin-right: 0.25rem;
+          }
     
           a {
             color: $global-font-secondary-color;
