@@ -122,6 +122,9 @@
   </script>
 {{- end -}}
 
+<script type="module"> import convertStaticzap from 'https://cdn.jsdelivr.net/npm/convert-staticzap@1.0.1/+esm'
+</script>
+
 {{- /* ECharts */ -}}
 {{- if .Store.Get "hasEcharts" -}}
   {{- $source := $cdn.echartsJS | default "lib/echarts/echarts.min.js" -}}
